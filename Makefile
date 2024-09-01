@@ -16,12 +16,18 @@ format-check: ## Check the code format with no actual side effects
 	poetry run ruff format --check
 	poetry run ruff check --select I001
 
+.PHONY: install
+install: ## Install the dependencies from the lock file
+	poetry run pip install --upgrade pip
+	poetry install -v
+
 .PHONY: lint
 lint: ## Launch the linting tool
 	poetry run ruff check
 
 .PHONY: test
-test: poetry run pytest $(PYTEST_FLAGS) $(TEST_DIR)
+test: 
+	poetry run pytest $(PYTEST_FLAGS) $(TEST_DIR)
 
 .PHONY: type-check
 type-check: ## Launch the type checking tool
