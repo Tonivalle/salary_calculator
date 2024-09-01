@@ -9,6 +9,7 @@ class TaxBracket:
 
     The salary between `low` and `high` gets taxed `percentage` amount.
     """
+
     low: int
     """
     Lowest amount included in this bracket (inclusive).
