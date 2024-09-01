@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "salary-calculator"
+version = "0.1.0"
+description = "A net salary calculator and other utilities."
+authors = ["Tonivalle <tonivalle15@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.3"
+mypy = "^1.11.2"
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
