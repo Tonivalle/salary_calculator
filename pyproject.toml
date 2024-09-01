@@ -18,3 +18,24 @@ pytest = "^8.3.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+pretty = true
+show_error_codes = true
+show_error_context = true
+implicit_reexport = true
+namespace_packages = true
+
+[tool.ruff]
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", # Errors (pycodestyle)
+    "F", # PyFlakes
+    "PL", # PyLint
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
