@@ -1,6 +1,6 @@
 import pytest
 
-from salary_calculator.brackets.bracket import TaxBracket
+from salary_calculator.brackets import TaxBracket
 
 
 @pytest.mark.parametrize(
